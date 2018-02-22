@@ -49,6 +49,8 @@ items:
   kind: Service
   metadata:
     name: perceptor
+    annotations:
+      prometheus.io/scrape: 'true'
   spec:
     selector:
       name: bds-perceptor
@@ -63,6 +65,6 @@ items:
     name: perceptor-config
   data:
     perceptor_conf.yaml: |
-      HubHost: "nginx-webapp-logstash"
+      HubHost: "34.227.106.252.xip.io"
       HubUser: "sysadmin"
       HubUserPassword: "blackduck"
